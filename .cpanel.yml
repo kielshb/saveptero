@@ -6,6 +6,7 @@ deployment:
     - /bin/cp about.html $DEPLOYPATH
     - /bin/cp how-to-play.html $DEPLOYPATH
     - /bin/cp privacy-policy.html $DEPLOYPATH
+    - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp game.js $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
