@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Redirect old .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+about\.html[\s?] [NC]
+RewriteRule ^about\.html$ /about/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+how-to-play\.html[\s?] [NC]
+RewriteRule ^how-to-play\.html$ /how-to-play/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+privacy-policy\.html[\s?] [NC]
+RewriteRule ^privacy-policy\.html$ /privacy-policy/ [R=301,L]
+
+
+# Serve HTML files through clean URLs
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^how-to-play/?$ how-to-play.html [L]
+RewriteRule ^privacy-policy/?$ privacy-policy.html [L]

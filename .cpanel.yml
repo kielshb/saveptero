@@ -8,6 +8,7 @@ deployment:
     - /bin/cp privacy-policy.html $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
+    - /bin/cp htaccess $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp game.js $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
