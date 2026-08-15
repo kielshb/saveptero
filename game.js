@@ -904,7 +904,7 @@ ctx.globalAlpha = 1;
         ctx.font = "48px 'VT323'";
 
         ctx.fillText(
-            "↻",
+            "\u21BB",
             canvas.width / 2,
             popupY + 110
         );
