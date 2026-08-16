@@ -425,7 +425,7 @@
             ctx.textAlign = "center";
 
             ctx.fillText(
-                "Save Dino",
+                "Save Ptero",
                 canvas.width / 2,
                 popupY + 60
             );
