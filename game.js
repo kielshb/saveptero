@@ -927,3 +927,127 @@ ctx.globalAlpha = 1;
     document.fonts.ready.then(() => {
         gameLoop();
     });
+
+
+
+    // MOBILE TOUCH CONTROL //
+
+    (function setupMobileArrowControls() {
+
+        const leftButton =
+            document.getElementById("leftButton");
+
+        const rightButton =
+            document.getElementById("rightButton");
+
+        if (!leftButton || !rightButton) {
+            return;
+        }
+
+
+        // LEFT BUTTON
+        leftButton.addEventListener(
+            "pointerdown",
+            function(event) {
+
+                event.preventDefault();
+
+                // mulai game
+                if (!gameStarted && !gameOver) {
+                    gameStarted = true;
+                    return;
+                }
+
+                // restart ketika game over
+                if (gameOver) {
+                    resetGame();
+                    return;
+                }
+
+                leftPressed = true;
+            }
+        );
+
+
+        leftButton.addEventListener(
+            "pointerup",
+            function(event) {
+
+                event.preventDefault();
+
+                leftPressed = false;
+            }
+        );
+
+
+        leftButton.addEventListener(
+            "pointercancel",
+            function() {
+
+                leftPressed = false;
+            }
+        );
+
+
+        leftButton.addEventListener(
+            "pointerleave",
+            function() {
+
+                leftPressed = false;
+            }
+        );
+
+
+        // RIGHT BUTTON
+        rightButton.addEventListener(
+            "pointerdown",
+            function(event) {
+
+                event.preventDefault();
+
+                // mulai game
+                if (!gameStarted && !gameOver) {
+                    gameStarted = true;
+                    return;
+                }
+
+                // restart ketika game over
+                if (gameOver) {
+                    resetGame();
+                    return;
+                }
+
+                rightPressed = true;
+            }
+        );
+
+
+        rightButton.addEventListener(
+            "pointerup",
+            function(event) {
+
+                event.preventDefault();
+
+                rightPressed = false;
+            }
+        );
+
+
+        rightButton.addEventListener(
+            "pointercancel",
+            function() {
+
+                rightPressed = false;
+            }
+        );
+
+
+        rightButton.addEventListener(
+            "pointerleave",
+            function() {
+
+                rightPressed = false;
+            }
+        );
+
+    })();
