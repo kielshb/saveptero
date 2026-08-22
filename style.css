@@ -156,3 +156,78 @@ font-size: 20px;
         transform: scale(0.95);
     }
 }
+
+
+/* TABLET SAVEPTERO 701px - 1024px */
+
+@media (min-width: 701px) and (max-width: 1024px) {
+
+    canvas {
+        width: calc(100vw - 30px);
+        height: auto;
+        max-width: 800px;
+    }
+
+    .navbar {
+        top: 8px;
+
+        gap: 25px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    #mobileControls {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 35px;
+
+        z-index: 100;
+
+        pointer-events: none;
+    }
+
+    .mobileArrow {
+        width: 70px;
+        height: 60px;
+
+        border: 2px solid white;
+        border-radius: 8px;
+
+        background: rgba(0, 0, 0, 0.65);
+
+        color: white;
+
+        font-family: 'VT323', monospace;
+        font-size: 36px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        pointer-events: auto;
+
+        touch-action: none;
+
+        user-select: none;
+        -webkit-user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobileArrow:active {
+        background: rgba(255, 255, 255, 0.25);
+
+        transform: scale(0.95);
+    }
+}

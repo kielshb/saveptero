@@ -486,8 +486,8 @@
         }
 
         // level easy
-        if (survivalTime <= 20) {
-            meteorSpeed = 5;
+        if (survivalTime <= 15) {
+            meteorSpeed = 6;
             spawnRate = 900;
         }
 
@@ -781,10 +781,10 @@ ctx.globalAlpha = 1;
 
             // collision detection
             if(
-                meteors[i].x < dinoX + hitboxWidth - 10 &&
-                meteors[i].x + meteors[i].width > dinoX + 25 &&
-                meteors[i].y < dinoY + hitboxHeight - 10&&
-                meteors[i].y + meteors[i].height > dinoY + 25
+                meteors[i].x < dinoX + hitboxWidth - 20 &&
+                meteors[i].x + meteors[i].width > dinoX + 35 &&
+                meteors[i].y < dinoY + hitboxHeight - 20&&
+                meteors[i].y + meteors[i].height > dinoY + 35
             
             ){
 
